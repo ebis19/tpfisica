@@ -3,10 +3,11 @@ package blanco;
 public class Blanco {
 
 	
-	double anguloI;
-	final double ANGULOMAX=Math.toRadians(20);
+	private double anguloI;
+	private final double ANGULOMAX=Math.toRadians(20);
 	final double RADIO=0.5;
 	final double RADIOCHIQUITO=0.25;
+	final double CENTRO =0.01;
 	
 	public double getDistanciaALAFlecha(Flecha flecha){
 		double t= flecha.obtenerTiempoImpacto();
@@ -23,4 +24,12 @@ public class Blanco {
 	public Blanco(double anguloI) {
 		this.anguloI = anguloI;	
 	}
+
+	@Override
+	public String toString() {
+		return "Angulo Inicial" + anguloI + "\nAngulo Maximo" + ANGULOMAX + "Radio" + RADIO + "Radio Chiquito"
+				+ RADIOCHIQUITO + "\nCentro:" + CENTRO;
+	}
+	
+	
 }
